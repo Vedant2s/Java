@@ -29,12 +29,19 @@ public class Main
 		/*System.out.println("enter the character");
 	    char c = reader.next().charAt(0);
 		System.out.println("the entered char has ASCII value as "+(int)c);*/
-		System.out.println("enter the character");
+		/*System.out.println("enter the character");
 		String str1 = reader.next();
 		if(str1.charAt(0)=='a'||str1.charAt(0)=='e'||str1.charAt(0)=='i'||str1.charAt(0)=='o'||str1.charAt(0)=='u')
 		System.out.println("the first char of the sting  "+str1+" is vowel");
 		else
-		System.out.println("the first char is char is  not vowel");
-		
+		System.out.println("the first char is char is  not vowel");*/
+		System.out.println("enter the character");
+		String str1 = reader.next();
+		int length = str1.length();
+		for(int i=1;i<=(int)(length/2);i++){
+		    if(str1.charAt(i-1)==str1.charAt((int)(length/2)-i-1))
+		    else
+		    count++;
+		}
 	}
 }
