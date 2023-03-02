@@ -1,6 +1,7 @@
+package firstpackage;
 import java.util.Scanner;
-public class Main
-{
+public class examples {
+
 	public static void main(String[] args) {
 		Scanner reader =new Scanner(System.in);
 		System.out.println("Enter the number:");
@@ -35,13 +36,33 @@ public class Main
 		System.out.println("the first char of the sting  "+str1+" is vowel");
 		else
 		System.out.println("the first char is char is  not vowel");*/
-		System.out.println("enter the character");
+		/*System.out.println("enter the character");
 		String str1 = reader.next();
 		int length = str1.length();
-		for(int i=1;i<=(int)(length/2);i++){
-		    if(str1.charAt(i-1)==str1.charAt((int)(length/2)-i-1))
-		    else
-		    count++;
+		int count=0;
+		int numy = length/2  ;
+		if(length%2!=0)
+			numy=numy-1;
+		System.out.println("the "+numy);
+		for(int i=0;i<=(numy);i++){
+		    if((str1.charAt(i)!=str1.charAt((length)-i-1)))
+		    {count=count+1;}
 		}
+		if(count==0)
+			System.out.println("the string entered IS palindrome");
+		else
+			System.out.println("the string entered is NOT a palindrome"+count);*/
+		int n=reader.nextInt();
+		double[] rt =new double[n];
+		System.out.println("enter the array of "+n+" numbers:");
+		for(int i=0;i<n;i++) {
+			rt[i]=reader.nextDouble();
+		}
+		double total=0;
+		for(int i=0;i<n;i++) {
+			total=total+rt[i];
+		}
+		//double average=total/n;
+		System.out.format("the average of the entered no. is %.3f",total/n);
 	}
 }
