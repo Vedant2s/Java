@@ -1,49 +1,53 @@
-package complex;
+package SYITB111;
 import java.util.Scanner;
 
 public class complexCalculations {
 
 	
 	public static void main(String[] args) {
-		int expression=0;
-		float num1,num2;
+		int expression=5,choicep=1;
+		float num1=0f,num2=0f;
 		calculations cal=new calculations();
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the first complex no.");
-		num1= input.nextFloat();
-		num2=input.nextFloat();
-		calculations object1= new calculations(num1,num2);
-		System.out.println("Enter the second complex no.");
-		num1= input.nextFloat();
-		num2=input.nextFloat();
-		calculations object2= new calculations(num1,num2);
+		
 		do {
-		System.out.println("Enter a choice(in int)\n1> Addition \n2> Subtraction\n3> Multiplication\n4> Division\n5> Update the two complex no.\n0> Exit");
+			
+			if(choicep!=0) {System.out.println("Enter the first complex no.");
+				num1= input.nextFloat();
+			num2=input.nextFloat();}
+			calculations object1= new calculations(num1,num2);
+			if(choicep!=0) {
+				System.out.println("Enter the second complex no.");
+				num1= input.nextFloat();
+			num2=input.nextFloat();}
+			calculations object2= new calculations(num1,num2);
+		System.out.println("Enter a choice(in int)\n1> Addition \n2> Subtraction\n3> Multiplication\n4> Division\n0> Exit");
 		expression=input.nextInt();
 		switch(expression){    
 		case 1:    
 			cal.addNumbers(object1, object2);
+			System.out.println("do you want to update the complex number?(0/1)");
+			choicep=input.nextInt();
 		 break;    
 		case 2:    
 			cal.subtraction(object1, object2);
+			System.out.println("do you want to update the complex number?(0/1)");
+			choicep=input.nextInt();
 		 break;        
 		case 3:    
 			cal.multiplication(object1, object2);
+			System.out.println("do you want to update the complex number?(0/1)");
+			choicep=input.nextInt();
 		 break;
 		case 4:    
 			cal.division(object1, object2);
+			System.out.println("do you want to update the complex number?(0/1)");
+			choicep=input.nextInt();
 		 break; 
-		case 5:    
-			System.out.println("Enter the first complex no.");
-			num1= input.nextFloat();
-			num2=input.nextFloat();
-			//calculations object1= new calculations(num1,num2);
-			System.out.println("Enter the second complex no.");
-			num1= input.nextFloat();
-			num2=input.nextFloat();
-			//calculations object2= new calculations(num1,num2);
-		 break;
-		default: System.out.println("Enter a valid choice");    
+		default: System.out.println("Enter a valid choice"); 
+		System.out.println("do you want to update the complex number?(0/1)");
+		choicep=input.nextInt();
+		break;
 		    
 		} }while(expression!=0);
 		
