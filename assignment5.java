@@ -1,7 +1,7 @@
-package prv;
+//package prv;
 import java.util.*;
 public class A5areart {
-	public void main() {
+	public static void main(String[] args) {
 	int choice=0;
 	Scanner nty=new Scanner(System.in);
 	shape s;
@@ -48,6 +48,6 @@ class triangle extends shape{
 		System.out.println("enter the base and heigth of rectangle");
 		first=n.nextDouble();
 		second=n.nextDouble();
-		System.out.println("Area of rectangle:"+first*second);
+		System.out.println("Area of rectangle:"+0.5*first*second);
 	}
 }
