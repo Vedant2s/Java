@@ -133,7 +133,7 @@ class Bicycle implements Vehicle{
 		System.out.println("the cycle has now changed speed from "+speed+" to "+(speed+a));
 		speed=speed+a;}
 		else {
-			System.out.println("the cycle has max speed of only "+gear_max+"Km/h"+" so it has now changed speed to its max value");
+			System.out.println("the cycle has max speed of only "+speed_max+"Km/h"+" so it has now changed speed to its max value");
 		speed=speed_max;}
 	}
 	public void applyBreak(int a) {
@@ -167,7 +167,7 @@ class Bike implements Vehicle{
 		System.out.println("the Bike has now changed speed from "+speed+" to "+(speed+a));
 		speed=speed+a;}
 		else {
-			System.out.println("the Bike has max speed of only "+gear_max+"Km/h"+" so it has now changed speed to its max value");
+			System.out.println("the Bike has max speed of only "+speed_max+"Km/h"+" so it has now changed speed to its max value");
 		speed=speed_max;}
 	}
 	public void applyBreak(int a) {
@@ -200,7 +200,7 @@ class Car implements Vehicle{
 		System.out.println("the Car has now changed speed from "+speed+" to "+(speed+a));
 		speed=speed+a;}
 		else {
-			System.out.println("the Car has max speed of only "+gear_max+"Km/h"+" so it has now changed speed to its max value");
+			System.out.println("the Car has max speed of only "+speed_max+"Km/h"+" so it has now changed speed to its max value");
 		speed=speed_max;}
 	}
 	public void applyBreak(int a) {
