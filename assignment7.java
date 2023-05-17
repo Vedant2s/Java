@@ -1,6 +1,7 @@
-//package ASSIGNMENT_7;
+package exam;
 import java.util.Scanner;
-public class ASS_7 {
+import java.lang.Exception;
+public class ass7b {
 
 	public static void main(String[] args) {
 		int ch=0,ns;
@@ -16,13 +17,14 @@ public class ASS_7 {
 			System.out.print(" enter the number you want to push in the stack(0 is not allowed)\n");
 			int nes=n.nextInt();
 			ob1.push(nes);
+			
 			break;
 		case 2:
 		    int x= ob1.pop();
 			if(x!=0)
 				System.out.print(" poped item from the stack\t"+x);
-			else
-				System.out.print("UNDERFLOW DETECTED\n");
+			//else
+			//	System.out.print("UNDERFLOW DETECTED\n");
 			break;
 		}
 		}while(ch!=0);
@@ -38,17 +40,23 @@ class stack{
 		
 	}
 	public  void push(int a) {
-		if(top+ 1==n)
-		System.out.print("OVERRFLOW DETECTED\n");
-		if(a!=0&&top<n-1)
-		stack[++top]=a;
+//		if(top+ 1==n)
+//		System.out.print("OVERRFLOW DETECTED\n");
+		try{
+			//if(a!=0&&top<n-1)
+		stack[++top]=a;}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.print("OVERRFLOW DETECTED\t"+e+"\n");
+		}
 		
 	}
 	public int pop() {
-		if((top-1)>=-1)
-		return stack[top--];
-		else 
+		//if((top-1)>=-1)
+		try{return stack[top--];}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.print("UNDERRFLOW DETECTED\t"+e+"\n");
+		}
+		//else 
 			return 0;
 	}
 }
-
