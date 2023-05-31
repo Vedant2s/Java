@@ -47,6 +47,7 @@ class stack{
 		stack[++top]=a;}
 		catch(ArrayIndexOutOfBoundsException e) {
 			System.out.print("OVERRFLOW DETECTED\t"+e+"\n");
+			top--;
 		}
 		
 	}
@@ -55,6 +56,7 @@ class stack{
 		try{return stack[top--];}
 		catch(ArrayIndexOutOfBoundsException e) {
 			System.out.print("UNDERRFLOW DETECTED\t"+e+"\n");
+			top++;
 		}
 		//else 
 			return 0;
